@@ -1,27 +1,36 @@
+body{
+    background-color: #f1f1f1;
+}
+.container-lg{
+    margin-top: 10px;
+}
 /* For large screen, the default container was giving very big margin both sides which wasn't looking good */
-@media (min-width:1450px){
+@media (min-width:1500px){
     .container-lg{
-        max-width: 1350px;
+        max-width: 1450px;
     }
     #pic{
         height: 250px !important;
     }
 }
-#left,#right{
-    box-shadow:2px 2px 2px 2px #808080;
+#left,.main{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    height: fit-content;
 }
 #left{
     margin-right: 3%; /*To give gap between left and right*/ 
 }
 #pic{
     position: relative;
-    background-image: url(./selfie.png);
+    background-image: url(img/selfie.png);
     width: 100%;
     height: 200px;
     background-size: 100% 100%;
 }
 /*For small size screens, when left and right stack up*/
-@media(max-width:576px){
+@media(max-width:767px){
     #pic{
         height:300px;
     }
@@ -34,4 +43,35 @@
     bottom: 0;
     left: 0;
     font: 25px bold;
+    margin: 10px 0px;
+}
+/*For all the icons from different sites*/
+.fa,.fas, .fab, .material-icons{
+    font-size: 1.5em;
+    color: #009688;
+    display: inline-block;
+}
+/*Google icons were going up, not in line with text. to fix it...*/
+.material-icons{
+    position: relative;
+    top: 10px;
+}
+/*for text beside icons*/
+span{
+    margin-left: 5px;
+    width: 90%;
+}
+footer{
+    background-color: #009688;
+}
+h3, h4{
+    text-align: center;
+}
+/*For icons in the footer*/
+footer .fab{
+    color: #000000;
+    font-size: 3em;
+}
+footer hr{
+    border:1px solid white;
 }
